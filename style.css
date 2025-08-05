@@ -60,9 +60,10 @@ ul {
 
 footer {
   text-align: center;
-  padding: 1rem;
-  border-top: 1px solid #eee;
-  color: #666;
-  margin-top: 3rem;
-  font-size: 0.9rem;
+  padding: 1.2rem 0;
+  border-top: 1px solid #ccc;
+  color: #228B22; /* Forest Green */
+  background-color: #f4fdf4; /* light green background (optional) */
+  font-size: 1rem;
+  margin-top: 2rem;
 }
