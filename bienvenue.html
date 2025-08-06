@@ -30,21 +30,29 @@
     }
 
     .hero {
-      background-image: url("patricia.jpg");
+      background-image: url("exemple_fond_ecran.jpg");
       background-size: cover;
-      background-position: center top;
-      min-height: 90vh;
+      background-position: center;
+      min-height: 100vh;
       display: flex;
       flex-direction: column;
       justify-content: flex-end;
+      align-items: center;
       padding: 2rem 1rem;
+    }
+
+    .portrait {
+      width: 200px;
+      max-width: 60%;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+      margin-bottom: 1.5rem;
     }
 
     .hero-message {
       background-color: rgba(255, 255, 255, 0.85);
       padding: 2rem 1rem;
       max-width: 600px;
-      margin: 0 auto 2rem;
       border-radius: 10px;
       text-align: center;
     }
@@ -67,6 +75,9 @@
       .hero-message h1 {
         font-size: 1.6rem;
       }
+      .portrait {
+        width: 150px;
+      }
     }
   </style>
 </head>
@@ -79,6 +90,8 @@
   </div>
 
   <div class="hero">
+    <img src="patricia.jpg" alt="Portrait de Patricia Sonia Bekono" class="portrait">
+
     <div class="hero-message">
       <h1>Bienvenue&nbsp;!</h1>
       <p>
