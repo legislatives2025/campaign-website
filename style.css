@@ -1,39 +1,81 @@
-<!DOCTYPE html>
-<html lang="fr">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Bienvenue – Patricia Sonia Bekono</title>
-  <link rel="stylesheet" href="style.css">
-</head>
-<body>
-  <div class="nav-bar">
-    <a href="index.html">Accueil</a>
-    <a href="Agenda.html">Agenda</a>
-  </div>
+/* Corps entier vert forêt */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  background-color: #e0f3d0; /* fond vert clair type forêt douce */
+  color: #2f4f2f;
+}
 
-  <div class="container">
-    <div class="photo-block">
-      <div class="photo-background">
-        <img src="patricia-removebg-preview.png" alt="Patricia Sonia Bekono" class="portrait">
-      </div>
+/* Barre de navigation : espacement précis Accueil | Agenda */
+.nav-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem 3rem 0.5rem 3rem;
+  font-size: 1.4rem;
+  font-weight: bold;
+  background-color: transparent;
+}
 
-      <h1 class="intro-title">🌱 𝗕𝗜𝗘𝗡𝗩𝗘𝗡𝗨𝗘 !</h1>
+.nav-bar a {
+  color: #1d4718;
+  text-decoration: none;
+  padding: 0.5rem;
+}
 
-      <p class="bio-text">
-        S𝗶𝘁𝗲 𝗼𝗳𝗳𝗶𝗰𝗶𝗲𝗹 :<br>
-        𝗣𝗮𝘁𝗿𝗶𝗰𝗶𝗮 𝗦𝗼𝗻𝗶𝗮 𝗕𝗲𝗸𝗼𝗻𝗼<br>
-        X : <a href="https://x.com/SoniaBEKO" target="_blank">@SoniaBEKO</a>
-      </p>
+.nav-bar a:hover {
+  text-decoration: underline;
+}
 
-      <p class="bio-text">
-        𝗙𝗲𝗺𝗺𝗲 𝗱𝗲 𝗰𝗼𝗻𝘃𝗶𝗰𝘁𝗶𝗼𝗻, 𝗽𝗿𝗮𝗴𝗺𝗮𝘁𝗶𝗾𝘂𝗲, 𝗲𝗻𝗴𝗮𝗴𝗲‌𝗲 𝗽𝗼𝘂𝗿 𝘂𝗻𝗲 𝘀𝗼𝗰𝗶𝗲́𝘁𝗲́ 𝗷𝘂𝘀𝘁𝗲, 𝘀𝗼𝗹𝗶𝗱𝗮𝗶𝗿𝗲 𝗲𝘁 𝘁𝗿𝗮𝗻𝘀𝗽𝗮𝗿𝗲𝗻𝘁𝗲.<br><br>
-        𝗝𝗲 𝗽𝗼𝗿𝘁𝗲 𝗹𝗮 𝘃𝗼𝗶𝘅 𝗱𝗲 𝗰𝗲𝘂𝘅 𝗾𝘂𝗶 𝗲𝘅𝗶𝗴𝗲𝗻𝘁 𝘂𝗻 𝗥𝗲𝗻𝗼𝘂𝘃𝗲𝗮𝘂 𝗮𝘂 𝗰œ𝘂𝗿 𝗱𝗲 𝗣𝗮𝗿𝗶𝘀.<br><br>
-        Je m'engage à protéger notre planète et promouvoir des pratiques durables. Ensemble, faisons la différence.
-      </p>
+/* Section contenant portrait + texte */
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  max-width: 750px;
+  margin: 0 auto;
+  padding: 0;
+}
 
-      <p class="quote">“Ensemble, faisons entendre une autre voix, la vôtre”</p>
-    </div>
-  </div>
-</body>
-</html>
+/* Fond végétal uniquement derrière la photo */
+.photo-background {
+  background-image: url("background.jpg");
+  background-size: cover;
+  background-position: center;
+  padding: 2rem;
+  border-radius: 8px;
+}
+
+/* Portrait Patricia */
+.portrait {
+  width: 160px;
+  max-width: 40%;
+  margin-bottom: 2rem;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+}
+
+/* Titre "Bienvenue" */
+.intro-title {
+  font-size: 2.2rem;
+  color: #1d4718;
+  font-weight: bold;
+  margin: 2rem 0 1rem 0;
+}
+
+/* Texte principal */
+.bio-text {
+  font-size: 1.2rem;
+  line-height: 1.8;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+/* Citation finale */
+.quote {
+  font-style: italic;
+  font-size: 1.3rem;
+  color: #2f4f2f;
+  margin: 2rem 0;
+}
