@@ -1,35 +1,120 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8">
-  <title>Bienvenue</title>
-  <link rel="stylesheet" href="style.css">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Accueil</title>
+  <style>
+    :root{
+      --green-900:#1f4d2b;
+      --green-700:#2e6b3a;
+      --cream:#edf3e4;
+      --maxw:1000px;
+    }
+    *{box-sizing:border-box;margin:0;padding:0}
+    body{font-family:system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;color:#0f2418;background:#f6faf4;line-height:1.5}
+    a{color:var(--green-900);text-decoration:none;font-weight:700}
+    .container{max-width:var(--maxw);margin-inline:auto;padding-inline:16px}
+
+    /* HERO */
+    .hero{
+      background:linear-gradient(180deg,#b7deb7, #8bc78b);
+      padding-top:14px;
+      padding-bottom:24px;
+      text-align:center;
+    }
+    .topbar{
+      display:flex;justify-content:space-between;align-items:center;gap:8px;
+      font-size:clamp(18px,2.5vw,28px);
+      padding:8px 0;
+      flex-wrap:wrap;
+    }
+    .leaf{font-size:1.2em;margin-right:.35rem}
+    .nav-link{
+      padding:12px 10px;
+      border-radius:10px;
+      display:inline-flex;
+      align-items:center;
+      width:100%;
+      justify-content:center;
+    }
+    .nav-link:focus-visible{outline:3px solid #0a7a3e;outline-offset:2px}
+    .nav-link:hover{background:rgba(255,255,255,.25)}
+    .hero-photo{
+      width:min(420px,80vw);
+      height:auto;
+      margin:10px auto 0 auto;
+      border-radius:8px;
+      box-shadow:0 10px 30px rgba(0,0,0,.12);
+      background:#b7deb7;
+    }
+
+    /* WELCOME CARD */
+    .welcome{
+      background:var(--cream);
+      margin:-10px auto 40px auto;
+      border-radius:12px;
+      padding:clamp(16px,4vw,36px);
+      box-shadow:0 6px 18px rgba(28,74,46,.08);
+      text-align:center;
+    }
+    .welcome h1{
+      font-size:clamp(28px,5vw,54px);
+      line-height:1.1;
+      color:var(--green-900);
+      margin-bottom:10px;
+    }
+    .welcome p{
+      font-size:clamp(16px,3.5vw,22px);
+      color:#1f3b29;
+    }
+
+    /* Mobile tweaks */
+    @media (max-width: 520px){
+      .topbar{
+        flex-direction:column;
+        align-items:stretch;
+      }
+      .nav-link{
+        font-size:1.1em;
+      }
+      .hero{padding-bottom:18px}
+      .welcome{margin:-8px auto 28px auto;padding:20px 16px}
+      .welcome h1{margin-bottom:8px}
+      .welcome p{font-size:clamp(16px,4.5vw,20px)}
+    }
+
+    /* Respect reduced motion */
+    @media (prefers-reduced-motion: reduce){
+      *{scroll-behavior:auto}
+    }
+  </style>
 </head>
 <body>
+  <header class="hero">
+    <nav class="topbar container" aria-label="Navigation principale">
+      <a href="index.html" class="nav-link"><span class="leaf">🍃</span>Accueil</a>
+      <a href="Agenda.html" class="nav-link">Agenda</a>
+    </nav>
+    <img class="hero-photo" src="images/patricia.png" alt="Portrait de Patricia Sonia Bekono" loading="lazy" decoding="async" />
+  </header>
 
-  <body>
-  <div class="nav-bar">
-    <a href="index.html">Accueil</a>
-    <a href="Agenda.html">Agenda</a>
-  </div>
-
-  <div class="container">
-    <div class="photo-background">
-      <img class="portrait" src="patricia-removebg-preview.png" alt="Patricia Sonia Bekono">
-    </div>
-
-    <h1 class="intro-title">🌱 BIENVENUE !</h1>
-
-    <div class="bio-text">
-      <p><strong>S𝗶𝘁𝗲 𝗼𝗳𝗳𝗶𝗰𝗶𝗲𝗹 :</strong><br>
-         𝗣𝗮𝘁𝗿𝗶𝗰𝗶𝗮 𝗦𝗼𝗻𝗶𝗮 𝗕𝗲𝗸𝗼𝗻𝗼 <br>
-         X : <a href="https://x.com/soniabeko" target="_blank">@SoniaBEKO</a>
+  <main class="container">
+    <section class="welcome">
+      <h1>Bienvenue&nbsp;!</h1>
+      <p>
+        Site officiel :<br>
+        Patricia Sonia Bekono<br>
+        X : @SoniaBEKO
       </p>
-      <p>𝗙𝗲𝗺𝗺𝗲 𝗱𝗲 𝗰𝗼𝗻𝘃𝗶𝗰𝘁𝗶𝗼𝗻, 𝗽𝗿𝗮𝗴𝗺𝗮𝘁𝗶𝗾𝘂𝗲, 𝗲𝗻𝗴𝗮𝗴𝗲‌𝗲 𝗽𝗼𝘂𝗿 𝘂𝗻𝗲 𝘀𝗼𝗰𝗶𝗲́𝘁𝗲́ 𝗷𝘂𝘀𝘁𝗲, 𝘀𝗼𝗹𝗶𝗱𝗮𝗶𝗿𝗲 𝗲𝘁 𝘁𝗿𝗮𝗻𝘀𝗽𝗮𝗿𝗲𝗻𝘁𝗲.</p>
-      <p>𝗝𝗲 𝗽𝗼𝗿𝘁𝗲 𝗹𝗮 𝘃𝗼𝗶𝘅 𝗱𝗲 𝗰𝗲𝘂𝘅 𝗾𝘂𝗶 𝗲𝘅𝗶𝗴𝗲𝗻𝘁 𝘂𝗻 𝗥𝗲𝗻𝗼𝘂𝘃𝗲𝗮𝘂 𝗮𝘂 𝗰œ𝘂𝗿 𝗱𝗲 𝗣𝗮𝗿𝗶𝘀.</p>
-      <p>Je m'engage à protéger notre planète et promouvoir des pratiques durables. Ensemble, faisons la différence.</p>
-    </div>
-
-    <div class="quote">"Ensemble, faisons entendre une autre voix, la vôtre"</div>
-  </div>
+      <p>
+        Femme de conviction, pragmatique, engagée pour une société juste, solidaire et transparente.<br>
+        Je porte la voix de ceux qui exigent un Renouveau au cœur de Paris.<br><br>
+        Je m'engage à protéger notre planète et à promouvoir des pratiques durables.<br>
+        Ensemble, faisons la différence.<br><br>
+        « Ensemble, faisons entendre une autre voix, la vôtre »
+      </p>
+    </section>
+  </main>
 </body>
+</html>
