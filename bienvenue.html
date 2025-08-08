@@ -24,19 +24,17 @@
       text-align:center;
     }
     .topbar{
-      display:flex;justify-content:space-between;align-items:center;gap:8px;
+      display:flex;justify-content:center;align-items:center;gap:20px;
       font-size:clamp(18px,2.5vw,28px);
       padding:8px 0;
-      flex-wrap:wrap;
+      flex-wrap:nowrap;
     }
     .leaf{font-size:1.2em;margin-right:.35rem}
     .nav-link{
-      padding:12px 10px;
+      padding:8px 10px;
       border-radius:10px;
       display:inline-flex;
       align-items:center;
-      width:100%;
-      justify-content:center;
     }
     .nav-link:focus-visible{outline:3px solid #0a7a3e;outline-offset:2px}
     .nav-link:hover{background:rgba(255,255,255,.25)}
@@ -56,7 +54,7 @@
       border-radius:12px;
       padding:clamp(16px,4vw,36px);
       box-shadow:0 6px 18px rgba(28,74,46,.08);
-      text-align:left;
+      text-align:center;
     }
     .welcome h1{
       font-size:clamp(28px,5vw,54px);
@@ -72,11 +70,11 @@
     /* Mobile tweaks */
     @media (max-width: 520px){
       .topbar{
-        flex-direction:column;
-        align-items:stretch;
+        gap:12px;
+        font-size:clamp(16px,4vw,20px);
       }
       .nav-link{
-        font-size:1.1em;
+        padding:6px 8px;
       }
       .hero{padding-bottom:18px}
       .welcome{margin:-8px auto 28px auto;padding:20px 16px}
@@ -84,7 +82,6 @@
       .welcome p{font-size:clamp(16px,4.5vw,20px)}
     }
 
-    /* Respect reduced motion */
     @media (prefers-reduced-motion: reduce){
       *{scroll-behavior:auto}
     }
@@ -96,7 +93,7 @@
       <a href="index.html" class="nav-link"><span class="leaf">🍃</span>Accueil</a>
       <a href="Agenda.html" class="nav-link">Agenda</a>
     </nav>
-    <img class="hero-photo" src="patricia.png" alt="" loading="lazy" decoding="async" />
+    <img class="hero-photo" src="images/patricia.png" alt="Portrait de Patricia Sonia Bekono" loading="lazy" decoding="async" />
   </header>
 
   <main class="container">
@@ -105,14 +102,14 @@
       <p>
         Site officiel :<br>
         Patricia Sonia Bekono<br>
-        <a href="https://x.com/SoniaBEKO" target="_blank">X : @SoniaBEKO</a> 
+        X : <a href="https://x.com/SoniaBEKO" target="_blank" rel="noopener">@SoniaBEKO</a>
       </p>
       <p>
-        </strong>Femme de conviction, pragmatique, engagée pour une société juste, solidaire et transparente.</strong><br><br>
-        </strong>Je porte la voix de ceux qui exigent un Renouveau au cœur de Paris.</strong><br><br>
-        Je m'engage à protéger notre planète et promouvoir des pratiques durables.<br>
+        <strong>Femme de conviction, pragmatique, engagée pour une société juste, solidaire et transparente.<br>
+        Je porte la voix de ceux qui exigent un Renouveau au cœur de Paris.</strong><br><br>
+        Je m'engage à protéger notre planète et à promouvoir des pratiques durables.<br>
         Ensemble, faisons la différence.<br><br>
-        </strong>« Ensemble, faisons entendre une autre voix, la vôtre »</strong>
+        <strong>« Ensemble, faisons entendre une autre voix, la vôtre »</strong>
       </p>
     </section>
   </main>
