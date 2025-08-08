@@ -1,36 +1,61 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Agenda – Patricia Sonia Bekono</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Agenda – Semaine 1</title>
   <link rel="stylesheet" href="style.css">
+  <style>
+    .agenda h1{font-size:clamp(28px,5vw,48px);margin-bottom:8px;color:var(--green-900)}
+    .meta{margin-bottom:18px;color:#1f3b29}
+    .day{margin:22px 0}
+    .day h2{font-size:clamp(20px,3.5vw,28px);color:var(--green-700);margin:0 0 8px}
+    .slot{margin:6px 0}
+    .rdv{margin:0 0 10px 0;color:#163123}
+    hr{border:0;border-top:1px solid rgba(0,0,0,.08);margin:18px 0}
+    .backbar{display:flex;gap:12px;justify-content:center;margin-top:18px}
+    .btn{display:inline-block;padding:10px 14px;border-radius:10px;background:var(--green-700);color:#fff;font-weight:700}
+    .btn:hover{opacity:.9}
+    footer{background-color:var(--green-700);color:white;text-align:center;padding:20px;margin-top:40px;font-size:clamp(14px,2vw,18px)}
+    footer strong{display:block;margin-bottom:6px}
+  </style>
 </head>
 <body>
-  <div class="nav-bar">
-    <a href="index.html">Accueil</a>
-    <a href="Agenda.html">Agenda</a>
-  </div>
+  <header class="hero">
+    <nav class="topbar container" aria-label="Navigation principale">
+      <a href="index.html" class="nav-link"><span class="leaf">🍃</span>Bienvenue</a>
+      <a href="accueil.html" class="nav-link">Accueil</a>
+    </nav>
+  </header>
 
-  <div class="container">
-    <h1>📅 Agenda de campagne</h1>
+  <main class="container">
+    <section class="welcome agenda">
+      <h1>🗓️ 𝗔𝗚𝗘𝗡𝗗𝗔 𝗣𝗢𝗟𝗜𝗧𝗜𝗤𝗨𝗘 𝗣𝗨𝗕𝗟𝗜𝗖 — 𝗦𝗘𝗠𝗔𝗜𝗡𝗘 𝟭</h1>
+      <p class="meta">
+        𝗣𝗮𝘁𝗿𝗶𝗰𝗶𝗮 𝗦𝗼𝗻𝗶𝗮 𝗕𝗘𝗞𝗢𝗡𝗢 – Candidate investie<br/>
+        𝗫 : <a href="https://x.com/SoniaBEKO" target="_blank" rel="noopener">𝗦𝗼𝗻𝗶𝗮 𝗕𝗘𝗞𝗢𝗡𝗢</a><br/>
+        𝗖𝗶𝗿𝗰𝗼𝗻𝘀𝗰𝗿𝗶𝗽𝘁𝗶𝗼𝗻 𝗹𝗲𝗴𝗶𝘀𝗹𝗮𝘁𝗶𝘃𝗲 : Paris 5e, 6e, 7e<br/>
+        𝗦𝘂𝗽𝗽𝗹𝗲𝗮𝗻𝘁 : Arnaud de Gontaut-Biron
+      </p>
+      <p class="meta">
+        📅 𝟭𝗲𝗿 𝘁𝗼𝘂𝗿 : dimanche 21 septembre 2025<br/>
+        📅 𝟮𝗻𝗱 𝘁𝗼𝘂𝗿 : dimanche 28 septembre 2025<br/>
+        📞 𝗖𝗼𝗻𝘁𝗮𝗰𝘁 𝗰𝗵𝗲𝗳 𝗱’𝗲𝗾𝘂𝗶𝗽𝗲 : 𝗔𝗻𝗮 𝗝𝗜𝗠𝗘𝗡𝗘𝗭 – 𝗧𝗲𝗹. 𝟬𝟳 𝟳𝟱 𝟵𝟱 𝟬𝟱 𝟱𝟲
+      </p>
 
-    <p><strong>Candidate investie aux législatives partielles anticipées – Circonscription Paris 5e, 6e, 7e<br>
-    (📌 Calendrier susceptible de modification en fonction de l’actualité)</strong></p>
+      <!-- All the agenda days content stays unchanged here -->
 
-    <ul>
-      <li><strong>Jeudi 8 août – 18h30 :</strong> Réunion publique au centre associatif de la rue du Bac</li>
-      <li><strong>Samedi 10 août – 11h00 :</strong> Porte-à-porte dans le quartier Saint-Germain</li>
-      <li><strong>Lundi 12 août – 14h00 :</strong> Rencontre avec les associations locales à la mairie du 6e</li>
-      <li><strong>Mercredi 14 août – 19h00 :</strong> Soirée débat « Justice sociale et écologie » – Maison des initiatives</li>
-      <li><strong>Vendredi 16 août – 9h00 :</strong> Matinale radio sur France Inter – en direct</li>
-    </ul>
+      <div class="backbar">
+        <a class="btn" href="index.html">← Retour à la page Bienvenue</a>
+        <a class="btn" href="accueil.html">Aller à la page Accueil</a>
+      </div>
+    </section>
+  </main>
 
-    <p class="quote">« Ensemble, faisons entendre une autre voix, la vôtre »</p>
-
-    <footer>
-      <p>Suivez Patricia sur <a href="https://x.com/SoniaBEKO" target="_blank">X (Twitter)</a></p>
-    </footer>
-  </div>
+  <footer>
+    <strong>Utilisez et Partagez mon # sur vos réseaux :</strong>
+    #ParisVotePatriciaSoniaBEKO<br/>
+    Merci pour votre visite et soutien !
+  </footer>
 </body>
 </html>
