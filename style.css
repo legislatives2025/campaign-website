@@ -1,126 +1,104 @@
-/* Fond général avec un vert forêt légèrement texturé */
-body {
-  margin: 0;
-  padding: 0;
-  font-family: Arial, sans-serif;
-  background-color: #2f4f2f; /* vert forêt */
-  color: #2f4f2f;
-}
+/* style.css */
 
-/* Barre de navigation haut de page */
-.nav-bar {
-  display: flex;
-  justify-content: space-between;
-  padding: 1rem 2rem;
-  background-color: rgba(255, 255, 255, 0.85);
-  font-weight: bold;
-  font-size: 1.1rem;
+:root{
+  --green-900:#1f4d2b;
+  --green-700:#2e6b3a;
+  --cream:#edf3e4;
+  --maxw:1000px;
 }
-
-.nav-bar a {
-  color: #228B22;
-  text-decoration: none;
-  border-bottom: 2px solid transparent;
+*{box-sizing:border-box;margin:0;padding:0}
+body{
+  font-family:system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;
+  color:#0f2418;
+  background:#f6faf4;
+  line-height:1.5;
 }
-
-.nav-bar a:hover {
-  border-color: #228B22;
+a{
+  color:var(--green-900);
+  text-decoration:none;
+  font-weight:700;
 }
-
-/* Fond feuillu pour la photo */
-.photo-background {
-  background-image: url("background.jpg");
-  background-size: cover;
-  background-position: center;
-  padding: 3rem 0;
-  display: flex;
-  justify-content: center;
+.container{
+  max-width:var(--maxw);
+  margin-inline:auto;
+  padding-inline:16px;
 }
-
-/* Portrait Patricia */
-.portrait {
-  width: 130px;
-  max-width: 30%;
-  border-radius: 10px;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+.topbar{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  font-size:clamp(18px,2.5vw,28px);
+  padding:8px 0;
 }
-
-/* Conteneur général */
-.container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 2rem 1rem;
-  text-align: center;
-  max-width: 800px;
-  margin: 0 auto;
-  background-color: rgba(255, 255, 255, 0.85);
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+.leaf{
+  font-size:1.2em;
+  margin-right:.35rem;
 }
-
-/* Titres et textes */
-.intro-title {
-  font-size: 2rem;
-  color: #006400;
-  margin-bottom: 1rem;
+.nav-link{
+  padding:8px 10px;
+  border-radius:10px;
+  display:inline-flex;
+  align-items:center;
 }
-
-.bio-text {
-  font-size: 1.05rem;
-  margin-bottom: 1.5rem;
-  line-height: 1.8;
+.nav-link:hover{
+  background:rgba(255,255,255,.25);
 }
-
-.bio-text a {
-  color: #006400;
-  text-decoration: none;
-  font-weight: bold;
+.hero{
+  background:linear-gradient(180deg,#b7deb7, #8bc78b);
+  padding-top:14px;
+  padding-bottom:24px;
+  text-align:center;
 }
-
-.bio-text a:hover {
-  text-decoration: underline;
+.hero-photo{
+  width:min(420px,80vw);
+  height:auto;
+  margin:10px auto 0 auto;
+  border-radius:8px;
+  box-shadow:0 10px 30px rgba(0,0,0,.12);
+  background:#b7deb7;
 }
-
-.quote {
-  font-style: italic;
-  font-size: 1.2rem;
-  color: #2f4f2f;
-  margin-top: 1rem;
+.welcome{
+  background:var(--cream);
+  margin:-10px auto 40px auto;
+  border-radius:12px;
+  padding:clamp(16px,4vw,36px);
+  box-shadow:0 6px 18px rgba(28,74,46,.08);
+  text-align:center;
 }
-
-/* Footer */
-footer {
-  text-align: center;
-  padding: 1rem 0;
-  margin-top: 2rem;
-  font-size: 0.9rem;
-  background-color: rgba(255, 255, 255, 0.85);
-  color: #228B22;
+.welcome h1{
+  font-size:clamp(28px,5vw,54px);
+  line-height:1.1;
+  color:var(--green-900);
+  margin-bottom:10px;
 }
-
-/* Responsive */
-@media (max-width: 600px) {
-  .container {
-    padding: 1rem;
+.welcome p{
+  font-size:clamp(16px,3.5vw,22px);
+  color:#1f3b29;
+}
+@media (max-width: 520px){
+  .topbar{
+    font-size:clamp(16px,4vw,20px);
   }
-
-  .portrait {
-    width: 120px;
+  .nav-link{
+    padding:6px 8px;
   }
-
-  .intro-title {
-    font-size: 1.6rem;
+  .hero{
+    padding-bottom:18px;
   }
-
-  .bio-text {
-    font-size: 1rem;
+  .welcome{
+    margin:-8px auto 28px auto;
+    padding:20px 16px;
   }
-
-  .nav-bar {
-    flex-direction: column;
-    align-items: center;
-    gap: 0.5rem;
-    font-size: 1rem;
+  .welcome h1{
+    margin-bottom:8px;
+  }
+  .welcome p{
+    font-size:clamp(16px,4.5vw,20px);
   }
 }
+@media (prefers-reduced-motion: reduce){
+  *{
+    scroll-behavior:auto;
+  }
+}
+
