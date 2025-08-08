@@ -24,10 +24,9 @@
       text-align:center;
     }
     .topbar{
-      display:flex;justify-content:center;align-items:center;gap:20px;
+      display:flex;justify-content:space-between;align-items:center;
       font-size:clamp(18px,2.5vw,28px);
       padding:8px 0;
-      flex-wrap:nowrap;
     }
     .leaf{font-size:1.2em;margin-right:.35rem}
     .nav-link{
@@ -70,7 +69,6 @@
     /* Mobile tweaks */
     @media (max-width: 520px){
       .topbar{
-        gap:12px;
         font-size:clamp(16px,4vw,20px);
       }
       .nav-link{
@@ -93,7 +91,7 @@
       <a href="index.html" class="nav-link"><span class="leaf">🍃</span>Accueil</a>
       <a href="Agenda.html" class="nav-link">Agenda</a>
     </nav>
-    <img class="hero-photo" src="patricia.png" alt="" loading="lazy" decoding="async" />
+    <img class="hero-photo" src="patricia.png" alt="" />
   </header>
 
   <main class="container">
@@ -109,7 +107,7 @@
         Je porte la voix de ceux qui exigent un Renouveau au cœur de Paris.</strong><br><br>
         Je m'engage à protéger notre planète et à promouvoir des pratiques durables.<br>
         Ensemble, faisons la différence.<br><br>
-        <strong>« Ensemble, faisons entendre une autre voix, la vôtre »</strong>
+        « Ensemble, faisons entendre une autre voix, la vôtre »
       </p>
     </section>
   </main>
