@@ -4,103 +4,125 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Accueil</title>
-  <link rel="stylesheet" href="style.css">
   <style>
-    /* Retouches spécifiques Accueil */
-    .welcome h1{font-size:clamp(28px,6vw,52px);margin-bottom:10px;color:var(--green-900)}
-    .welcome h2{font-size:clamp(18px,3.5vw,24px);color:var(--green-700);margin:12px 0}
-    .welcome ul{list-style:none;padding-left:0;margin:10px auto 8px;max-width:720px;text-align:left}
-    .welcome ul li{margin:6px 0}
-    .tag{display:inline-block;background:var(--green-700);color:#fff;border-radius:999px;padding:6px 12px;font-weight:700}
-    /* Nav social icons responsive */
-    .nav-left, .social{ display:flex; align-items:center; gap:16px; }
-    .icon-link{ display:inline-flex; align-items:center; gap:6px; padding:6px 8px; border-radius:10px; }
-    .icon-link:hover{ background:rgba(255,255,255,.25); }
-    .icon-link img{ width:20px; height:20px; display:block; }
-    .icon-link .label{ display:inline; font-weight:700; color:var(--green-900); }
-    @media (max-width:520px){ .icon-link .label{ display:none; } .social{ gap:12px; } }
-    /* Bouton soutien (dégradé vert) */
-    .btn-soutien{background:linear-gradient(135deg,#1f4d2b,#2e6b3b);color:#fff;padding:12px 24px;border-radius:8px;text-decoration:none;font-size:1.1em;font-weight:700;display:inline-block;box-shadow:0 4px 6px rgba(0,0,0,.2);transition:.3s}
-    .btn-soutien:hover{background:linear-gradient(135deg,#2e6b3b,#3c8b4c);box-shadow:0 6px 8px rgba(0,0,0,.3);transform:translateY(-2px)}
-    footer{ text-align:center;margin-top:40px;padding:20px;background-color:#f4f4f4 }
-    footer .icon{ vertical-align:middle; margin-right:6px }
+    :root{
+      --green-900:#1f4d2b;
+      --green-700:#2e6b3a;
+      --cream:#edf3e4;
+      --maxw:1000px;
+    }
+    *{box-sizing:border-box;margin:0;padding:0}
+    body{font-family:system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;color:#0f2418;background:#f6faf4;line-height:1.4}
+    a{color:var(--green-900);text-decoration:none;font-weight:700}
+    .container{max-width:var(--maxw);margin-inline:auto;padding-inline:12px}
+
+    /* HERO compact */
+    .hero{
+      background:linear-gradient(180deg,#b7deb7, #8bc78b);
+      padding-top:4px;
+      padding-bottom:8px;
+      text-align:center;
+    }
+    .topbar{
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      font-size:clamp(15px,2.5vw,20px);
+      padding:4px 0;
+    }
+    .leaf{font-size:1.2em;margin-right:.35rem}
+    .nav-link{
+      padding:4px 6px;
+      border-radius:8px;
+      display:inline-flex;
+      align-items:center;
+    }
+    .nav-link:hover{background:rgba(255,255,255,.25)}
+    .hero-photo{
+      width:min(240px,65vw);
+      height:auto;
+      margin:6px auto 0 auto;
+      border-radius:8px;
+      box-shadow:0 4px 12px rgba(0,0,0,.1);
+      background:#b7deb7;
+    }
+
+    /* WELCOME CARD compact */
+    .welcome{
+      background:var(--cream);
+      margin:6px auto 20px auto;
+      border-radius:12px;
+      padding:clamp(12px,3vw,20px);
+      box-shadow:0 4px 12px rgba(28,74,46,.08);
+      text-align:left;
+    }
+    .welcome h1{
+      font-size:clamp(20px,4vw,32px);
+      line-height:1.2;
+      color:var(--green-900);
+      margin-bottom:6px;
+    }
+    .welcome p{
+      font-size:clamp(14px,3.5vw,18px);
+      color:#1f3b29;
+      margin-bottom:6px;
+    }
+    .welcome strong{
+      font-weight:700;
+      color:var(--green-900);
+    }
+
+    /* Mobile tweaks */
+    @media (max-width: 520px){
+      .topbar{
+        font-size:15px;
+        padding:2px 0;
+      }
+      .nav-link{
+        padding:3px 5px;
+      }
+      .hero-photo{
+        width:200px;
+        margin-top:4px;
+      }
+      .welcome{
+        margin:4px auto 16px auto;
+        padding:14px 12px;
+      }
+    }
   </style>
 </head>
 <body>
-  <!-- Entête / Navigation -->
   <header class="hero">
     <nav class="topbar container" aria-label="Navigation principale">
-      <div class="nav-left">
-        <a href="index.html" class="nav-link"><span class="leaf">🍃</span>Bienvenue</a>
-        <a href="Agenda.html" class="nav-link">Agenda</a>
-      </div>
-      <div class="social">
-        <a href="https://x.com/SoniaBEKO" target="_blank" rel="noopener" class="icon-link" aria-label="Profil X / Twitter">
-          <img src="https://upload.wikimedia.org/wikipedia/commons/5/53/X_logo_2023_original.svg" alt="" width="20" height="20"><span class="label">X</span>
-        </a>
-        <a href="https://t.me/PatriciaSonia6" target="_blank" rel="noopener" class="icon-link" aria-label="Canal Telegram">
-          <img src="https://upload.wikimedia.org/wikipedia/commons/8/82/Telegram_logo.svg" alt="" width="20" height="20"><span class="label">Telegram</span>
-        </a>
-      </div>
+      <a href="index.html" class="nav-link"><span class="leaf">🍃</span>Accueil</a>
+      <a href="Agenda.html" class="nav-link">Agenda</a>
     </nav>
+
+    <!-- Phrase ajoutée -->
+    <p style="margin-top:4px; font-size:clamp(14px,3.5vw,18px); font-weight:700; color:var(--green-900); text-align:center;">
+      L'Écologie visible – L'Égalité et l'Europe des citoyens
+    </p>
+
+    <img class="hero-photo" src="patricia.png" alt="Portrait de Patricia Sonia Bekono" />
   </header>
 
-  <!-- Contenu principal -->
   <main class="container">
     <section class="welcome">
-      <h1>🏠 𝗔𝗖𝗖𝗨𝗘𝗜𝗟 | 📍 𝗔𝗰𝘁𝘂 𝗙𝗿𝗮𝗻𝗰𝗲 !</h1>
+      <h1>BIENVENUE 🇫🇷</h1>
+      <p><strong>SITE OFFICIEL -- BIO</strong><br>
+      Patricia Sonia Bekono - Candidate Députée — Circo 2 Paris 5e, 6e, 7e<br>
+      Législatives partielles anticipées<br>
+      21 & 28/08/2025</p>
 
-      <!-- Portrait centré -->
-      <img class="hero-photo" src="patricia.png" alt="Portrait de Patricia Sonia Bekono" />
+      <p><strong>« Ensemble, portons votre voix »</strong></p>
 
-      <!-- Ligne investiture -->
-      <p style="margin-top:12px;">𝗖𝗮𝗻𝗱𝗶𝗱𝗮𝘁𝗲 𝗶𝗻𝘃𝗲𝘀𝘁𝗶𝗲 𝗽𝗼𝘂𝗿 𝗹𝗲𝘀 𝗲‌𝗹𝗲𝗰𝘁𝗶𝗼𝗻𝘀 𝗹𝗲‌𝗴𝗶𝘀𝗹𝗮𝘁𝗶𝘃𝗲𝘀 𝗽𝗮𝗿𝘁𝗶𝗲𝗹𝗹𝗲𝘀 𝗮𝗻𝘁𝗶𝗰𝗶𝗽𝗲‌𝗲𝘀 | 𝗣𝗮𝗿𝗶𝘀 5e, 6e, 7e — Circo 2</p>
-      <p><span class="tag">INVESTITURE</span> – <a href="investiture.jpg" target="_blank" style="color:var(--green-900);font-weight:700;">Voir la lettre d'investiture</a></p>
+      <p>20 ans de Circo2, ma famille, ma fille et moi. Femme de conviction, pragmatique, engagée pour une société juste, solidaire et innovante.<br>
+      Je porte la voix de celles et ceux qui exigent un renouveau au cœur de Paris.<br>
+      Je m’engage à protéger notre planète à travers nos agriculteurs, à promouvoir des pratiques durables, et à défendre une politique de proximité.</p>
 
-      <!-- Bouton Soutien (ouvre le fichier dans un nouvel onglet) -->
-      <p style="text-align:center;margin-top:8px;">
-        <a href="formulaire-don.pdf" target="_blank" rel="noopener" class="btn-soutien">💚 Soutenez Patricia</a>
-      </p>
-
-      <!-- À propos du site -->
-      <h2>📣 𝗦𝘂𝗿 𝗰𝗲 𝘀𝗶𝘁𝗲, 𝘃𝗼𝘂𝘀 𝗽𝗼𝘂𝗿𝗿𝗲𝘇 :</h2>
-      <ul>
-        <li>– 𝗗𝗲́𝗰𝗼𝘂𝘃𝗿𝗶𝗿 𝗺𝗼𝗻 𝗽𝗮𝗿𝗰𝗼𝘂𝗿𝘀 𝗲𝘁 𝗺𝗲𝘀 𝗲𝗻𝗴𝗮𝗴𝗲𝗺𝗲𝗻𝘁𝘀</li>
-        <li>– 𝗟𝗶𝗿𝗲 𝗺𝗼𝗻 𝗽𝗿𝗼𝗴𝗿𝗮𝗺𝗺𝗲</li>
-        <li>– 𝗦𝘂𝗶𝘃𝗿𝗲 𝗹'𝗮𝗰𝘁𝘂𝗮𝗹𝗶𝘁𝗲́ 𝗱𝗲 𝗹𝗮 𝗰𝗮𝗺𝗽𝗮𝗴𝗻𝗲</li>
-        <li>– 𝗠𝗲 𝗰𝗼𝗻𝘁𝗮𝗰𝘁𝗲𝗿 𝗼𝘂 𝗮𝗽𝗽𝗼𝗿𝘁𝗲𝗿 𝘃𝗼𝘁𝗿𝗲 𝘀𝗼𝘂𝘁𝗶𝗲𝗻</li>
-      </ul>
-
-      <!-- Presse -->
-      <h2>📺 🎥🗞 𝗣𝗿𝗲𝘀𝘀𝗲 :</h2>
-      <p>📱 07 75 95 05 56<br>Privilégiez le SMS – Réponse assurée (pas de message vocal)</p>
-      <p>📧 Pour toute question :<br>
-         – Au parti : <a href="mailto:egaliteeuropeecologie@gmail.com">egaliteeuropeecologie@gmail.com</a><br>
-         – À Patricia : <a href="mailto:contact@patriciasoniabekono.fr">contact@patriciasoniabekono.fr</a>
-      </p>
-
-      <!-- Partage -->
-      <h2>📲 👉🏽 𝗣𝗮𝗿𝘁𝗮𝗴𝗲𝘇 :</h2>
-      <p>#ParisVotePatriciaSoniaBEKO 🇫🇷🇪🇺</p>
+      <p><strong>« Dans l'ombre ou la lumière ce projet est le vôtre »</strong></p>
     </section>
   </main>
-
-  <!-- Footer avec liens sociaux et rappel soutien -->
-  <footer>
-    <p style="margin-bottom:12px;font-weight:700;">Utilisez et Partagez mon # : <strong>#ParisVotePatriciaSoniaBEKO</strong></p>
-    <p>
-      <a href="formulaire-don.pdf" target="_blank" rel="noopener" class="btn-soutien">💚 Soutenez Patricia</a>
-    </p>
-    <p style="margin-top:16px;">
-      📌 Suivez-moi :
-      <a href="https://x.com/SoniaBEKO" target="_blank" style="color:#1f4d2b;font-weight:700;text-decoration:none;">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/5/53/X_logo_2023_original.svg" alt="X" class="icon" width="20" height="20">X / Twitter
-      </a> |
-      <a href="https://t.me/PatriciaSonia6" target="_blank" style="color:#1f4d2b;font-weight:700;text-decoration:none;">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/8/82/Telegram_logo.svg" alt="Telegram" class="icon" width="20" height="20">Telegram
-      </a>
-    </p>
-    <p style="margin-top:8px;">Merci pour votre visite et soutien !</p>
-  </footer>
 </body>
 </html>
