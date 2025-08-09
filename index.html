@@ -19,67 +19,72 @@
     /* HERO */
     .hero{
       background:linear-gradient(180deg,#b7deb7, #8bc78b);
-      padding-top:8px; /* ↓ réduit l'espace en haut */
-      padding-bottom:20px;
+      padding-top:6px;
+      padding-bottom:10px;
       text-align:center;
     }
     .topbar{
       display:flex;justify-content:space-between;align-items:center;
-      font-size:clamp(18px,2.5vw,28px);
-      padding:4px 0; /* ↓ réduit la hauteur de la barre */
-      margin-top:6px; /* ↓ décale un peu vers le bas */
+      font-size:clamp(16px,2.5vw,24px);
+      padding:4px 0;
+      margin-top:4px;
     }
     .leaf{font-size:1.2em;margin-right:.35rem}
     .nav-link{
-      padding:8px 10px;
+      padding:6px 8px;
       border-radius:10px;
       display:inline-flex;
       align-items:center;
     }
     .nav-link:hover{background:rgba(255,255,255,.25)}
     .hero-photo{
-      width:min(420px,80vw);
+      width:min(300px,70vw);
       height:auto;
-      margin:6px auto 0 auto;
+      margin:8px auto 0 auto;
       border-radius:8px;
-      box-shadow:0 10px 30px rgba(0,0,0,.12);
+      box-shadow:0 6px 18px rgba(0,0,0,.12);
       background:#b7deb7;
     }
 
     /* WELCOME CARD */
     .welcome{
       background:var(--cream);
-      margin:-10px auto 40px auto;
+      margin:-6px auto 20px auto;
       border-radius:12px;
-      padding:clamp(16px,4vw,36px);
+      padding:clamp(16px,4vw,28px);
       box-shadow:0 6px 18px rgba(28,74,46,.08);
-      text-align:left; /* ← aligne le texte à gauche */
+      text-align:left;
     }
     .welcome h1{
-      font-size:clamp(28px,5vw,54px);
+      font-size:clamp(24px,5vw,42px);
       line-height:1.1;
       color:var(--green-900);
-      margin-bottom:10px;
+      margin-bottom:8px;
     }
     .welcome p{
-      font-size:clamp(16px,3.5vw,22px);
+      font-size:clamp(15px,3.5vw,20px);
       color:#1f3b29;
+      margin-bottom:8px;
+    }
+    .welcome strong{
+      font-weight:700;
+      color:var(--green-900);
     }
 
     /* Mobile tweaks */
     @media (max-width: 520px){
       .topbar{
-        font-size:clamp(16px,4vw,20px);
+        font-size:clamp(15px,4vw,18px);
         padding:4px 0;
-        margin-top:8px; /* petit décalage vers le bas sur mobile */
+        margin-top:6px;
       }
       .nav-link{
         padding:6px 8px;
       }
-      .hero{padding-bottom:14px}
+      .hero{padding-bottom:8px}
       .welcome{
-        margin:-8px auto 20px auto;
-        padding:20px 16px;
+        margin:-6px auto 18px auto;
+        padding:18px 14px;
       }
     }
   </style>
@@ -95,14 +100,19 @@
 
   <main class="container">
     <section class="welcome">
-      <h1>Bienvenue&nbsp;!</h1>
-      <p>
-        Femme de conviction, pragmatique, engagée pour une société juste, solidaire et transparente.
-        Je porte la voix de ceux qui exigent un Renouveau au cœur de Paris.
-        Je m'engage à protéger notre planète et à promouvoir des pratiques durables.
-        Ensemble, faisons la différence.<br>
-        « Ensemble, faisons entendre une autre voix, la vôtre »
-      </p>
+      <h1>BIENVENUE 🇫🇷</h1>
+      <p><strong>SITE OFFICIEL -- BIO</strong><br>
+      Patricia Sonia Bekono - Candidate Députée — Circo 2 Paris 5e, 6e, 7e<br>
+      Législatives partielles anticipées<br>
+      21 & 28/08/2025</p>
+
+      <p><strong>« Ensemble, portons votre voix »</strong></p>
+
+      <p>20 ans de Circo2, ma famille, ma fille et moi. Femme de conviction, pragmatique, engagée pour une société juste, solidaire et innovante.<br>
+      Je porte la voix de celles et ceux qui exigent un renouveau au cœur de Paris.<br>
+      Je m’engage à protéger notre planète à travers nos agriculteurs, à promouvoir des pratiques durables, et à défendre une politique de proximité.</p>
+
+      <p><strong>« Dans l'ombre ou la lumière ce projet est le vôtre »</strong></p>
     </section>
   </main>
 </body>
