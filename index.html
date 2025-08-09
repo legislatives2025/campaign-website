@@ -12,59 +12,60 @@
       --maxw:1000px;
     }
     *{box-sizing:border-box;margin:0;padding:0}
-    body{font-family:system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;color:#0f2418;background:#f6faf4;line-height:1.5}
+    body{font-family:system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;color:#0f2418;background:#f6faf4;line-height:1.4}
     a{color:var(--green-900);text-decoration:none;font-weight:700}
-    .container{max-width:var(--maxw);margin-inline:auto;padding-inline:16px}
+    .container{max-width:var(--maxw);margin-inline:auto;padding-inline:12px}
 
-    /* HERO */
+    /* HERO compact */
     .hero{
       background:linear-gradient(180deg,#b7deb7, #8bc78b);
-      padding-top:6px;
-      padding-bottom:10px;
+      padding-top:4px;
+      padding-bottom:8px;
       text-align:center;
     }
     .topbar{
-      display:flex;justify-content:space-between;align-items:center;
-      font-size:clamp(16px,2.5vw,24px);
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      font-size:clamp(15px,2.5vw,20px);
       padding:4px 0;
-      margin-top:4px;
     }
     .leaf{font-size:1.2em;margin-right:.35rem}
     .nav-link{
-      padding:6px 8px;
-      border-radius:10px;
+      padding:4px 6px;
+      border-radius:8px;
       display:inline-flex;
       align-items:center;
     }
     .nav-link:hover{background:rgba(255,255,255,.25)}
     .hero-photo{
-      width:min(300px,70vw);
+      width:min(240px,65vw);
       height:auto;
-      margin:8px auto 0 auto;
+      margin:6px auto 0 auto;
       border-radius:8px;
-      box-shadow:0 6px 18px rgba(0,0,0,.12);
+      box-shadow:0 4px 12px rgba(0,0,0,.1);
       background:#b7deb7;
     }
 
-    /* WELCOME CARD */
+    /* WELCOME CARD compact */
     .welcome{
       background:var(--cream);
-      margin:-6px auto 20px auto;
+      margin:6px auto 20px auto;
       border-radius:12px;
-      padding:clamp(16px,4vw,28px);
-      box-shadow:0 6px 18px rgba(28,74,46,.08);
+      padding:clamp(12px,3vw,20px);
+      box-shadow:0 4px 12px rgba(28,74,46,.08);
       text-align:left;
     }
     .welcome h1{
-      font-size:clamp(24px,5vw,42px);
-      line-height:1.1;
+      font-size:clamp(20px,4vw,32px);
+      line-height:1.2;
       color:var(--green-900);
-      margin-bottom:8px;
+      margin-bottom:6px;
     }
     .welcome p{
-      font-size:clamp(15px,3.5vw,20px);
+      font-size:clamp(14px,3.5vw,18px);
       color:#1f3b29;
-      margin-bottom:8px;
+      margin-bottom:6px;
     }
     .welcome strong{
       font-weight:700;
@@ -74,17 +75,19 @@
     /* Mobile tweaks */
     @media (max-width: 520px){
       .topbar{
-        font-size:clamp(15px,4vw,18px);
-        padding:4px 0;
-        margin-top:6px;
+        font-size:15px;
+        padding:2px 0;
       }
       .nav-link{
-        padding:6px 8px;
+        padding:3px 5px;
       }
-      .hero{padding-bottom:8px}
+      .hero-photo{
+        width:200px;
+        margin-top:4px;
+      }
       .welcome{
-        margin:-6px auto 18px auto;
-        padding:18px 14px;
+        margin:4px auto 16px auto;
+        padding:14px 12px;
       }
     }
   </style>
@@ -92,7 +95,7 @@
 <body>
   <header class="hero">
     <nav class="topbar container" aria-label="Navigation principale">
-      <a href="accueil.html" class="nav-link"><span class="leaf">🍃</span>Accueil</a>
+      <a href="index.html" class="nav-link"><span class="leaf">🍃</span>Accueil</a>
       <a href="Agenda.html" class="nav-link">Agenda</a>
     </nav>
     <img class="hero-photo" src="patricia.png" alt="Portrait de Patricia Sonia Bekono" />
