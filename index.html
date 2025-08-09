@@ -19,14 +19,15 @@
     /* HERO */
     .hero{
       background:linear-gradient(180deg,#b7deb7, #8bc78b);
-      padding-top:14px;
-      padding-bottom:24px;
+      padding-top:8px; /* ↓ réduit l'espace en haut */
+      padding-bottom:20px;
       text-align:center;
     }
     .topbar{
       display:flex;justify-content:space-between;align-items:center;
       font-size:clamp(18px,2.5vw,28px);
-      padding:8px 0;
+      padding:4px 0; /* ↓ réduit la hauteur de la barre */
+      margin-top:6px; /* ↓ décale un peu vers le bas */
     }
     .leaf{font-size:1.2em;margin-right:.35rem}
     .nav-link{
@@ -35,12 +36,11 @@
       display:inline-flex;
       align-items:center;
     }
-    .nav-link:focus-visible{outline:3px solid #0a7a3e;outline-offset:2px}
     .nav-link:hover{background:rgba(255,255,255,.25)}
     .hero-photo{
       width:min(420px,80vw);
       height:auto;
-      margin:10px auto 0 auto;
+      margin:6px auto 0 auto;
       border-radius:8px;
       box-shadow:0 10px 30px rgba(0,0,0,.12);
       background:#b7deb7;
@@ -53,7 +53,7 @@
       border-radius:12px;
       padding:clamp(16px,4vw,36px);
       box-shadow:0 6px 18px rgba(28,74,46,.08);
-      text-align:center;
+      text-align:left; /* ← aligne le texte à gauche */
     }
     .welcome h1{
       font-size:clamp(28px,5vw,54px);
@@ -70,18 +70,17 @@
     @media (max-width: 520px){
       .topbar{
         font-size:clamp(16px,4vw,20px);
+        padding:4px 0;
+        margin-top:8px; /* petit décalage vers le bas sur mobile */
       }
       .nav-link{
         padding:6px 8px;
       }
-      .hero{padding-bottom:18px}
-      .welcome{margin:-8px auto 28px auto;padding:20px 16px}
-      .welcome h1{margin-bottom:8px}
-      .welcome p{font-size:clamp(16px,4.5vw,20px)}
-    }
-
-    @media (prefers-reduced-motion: reduce){
-      *{scroll-behavior:auto}
+      .hero{padding-bottom:14px}
+      .welcome{
+        margin:-8px auto 20px auto;
+        padding:20px 16px;
+      }
     }
   </style>
 </head>
@@ -91,15 +90,15 @@
       <a href="index.html" class="nav-link"><span class="leaf">🍃</span>Accueil</a>
       <a href="Agenda.html" class="nav-link">Agenda</a>
     </nav>
-    <img class="hero-photo" src="patricia.png" alt="" />
+    <img class="hero-photo" src="patricia.png" alt="Portrait de Patricia Sonia Bekono" />
   </header>
 
   <main class="container">
     <section class="welcome">
       <h1>Bienvenue&nbsp;!</h1>
       <p>
-        Femme de conviction, pragmatique, engagée pour une société juste, solidaire et transparente.
-        Je porte la voix de ceux qui exigent un Renouveau au cœur de Paris.
+        <strong>Femme de conviction, pragmatique, engagée pour une société juste, solidaire et transparente.</strong><br>
+        <strong>Je porte la voix de ceux qui exigent un Renouveau au cœur de Paris.</strong><br>
         Je m'engage à protéger notre planète et à promouvoir des pratiques durables.
         Ensemble, faisons la différence.<br>
         « Ensemble, faisons entendre une autre voix, la vôtre »
