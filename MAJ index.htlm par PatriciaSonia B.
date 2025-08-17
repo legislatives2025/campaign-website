@@ -1,0 +1,11 @@
+index.htlm
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Bienvenue</title>
+    <meta http-equiv="refresh" content="0; url=Agenda.html" />
+  </head>
+  <body>
+    <p>Redirection vers <a href="Agenda.html">Agenda</a>...</p>
+  </body>
+</html>
